@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>순위표 - NAC Op.3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ranking.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 배경 음표들 -->
+    <div class="music-notes">
+        <span class="note">♪</span>
+        <span class="note">♫</span>
+        <span class="note">♩</span>
+        <span class="note">♬</span>
+        <span class="note">♪</span>
+    </div>
+
+    <div class="container">
+        <!-- 헤더 영역 -->
+        <header class="main-header">
+            <h1 class="title">NAC Op.3</h1>
+            <p class="subtitle">예선 순위표</p>
+        </header>
+
+        <!-- 네비게이션 메뉴 -->
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">홈</a>
+            <a href="ranking.html" class="nav-link active">순위표</a>
+            <a href="info.html" class="nav-link">대회 정보</a>
+        </nav>
+
+        <!-- 순위표 메인 콘텐츠 -->
+        <main class="ranking-content">
+            <!-- 업데이트 정보 -->
+            <div class="update-info">
+                <p>마지막 업데이트: <span id="lastUpdate">-</span></p>
+                <button id="refreshBtn" class="refresh-button">새로고침 ↻</button>
+            </div>
+
+            <!-- 순위표 테이블 -->
+            <div class="ranking-table-container">
+                <table class="ranking-table">
+                    <thead>
+                        <tr>
+                            <th>순위</th>
+                            <th>참가자</th>
+                            <th>곡1</th>
+                            <th>곡2</th>
+                            <th>곡3</th>
+                            <th>곡4</th>
+                            <th>총점</th>
+                            <th>업데이트</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rankingBody">
+                        <!-- 여기에 구글 시트 데이터가 들어갑니다 -->
+                        <tr>
+                            <td colspan="5" class="loading">순위 데이터를 불러오는 중...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 본선 진출 안내 -->
+            <div class="qualification-info">
+                <h3>🏆 본선 진출 안내</h3>
+                <p>상위 <strong>16명</strong>이 본선에 진출합니다</p>
+                <p class="note-text">* 동점자의 경우 더 빨리 제출한 참가자가 상위 순위가 됩니다</p>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <p>&copy; 2024 NAC Op.3. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="ranking.js"></script>
+</body>
+</html>

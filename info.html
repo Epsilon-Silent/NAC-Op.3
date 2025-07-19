@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대회 정보 - NAC Op.3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="info.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 배경 음표들 -->
+    <div class="music-notes">
+        <span class="note">♪</span>
+        <span class="note">♫</span>
+        <span class="note">♩</span>
+        <span class="note">♬</span>
+        <span class="note">♪</span>
+    </div>
+
+    <div class="container">
+        <!-- 헤더 영역 -->
+        <header class="main-header">
+            <h1 class="title">NAC Op.3</h1>
+            <p class="subtitle">대회 정보</p>
+        </header>
+
+        <!-- 네비게이션 메뉴 -->
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">홈</a>
+            <a href="ranking.html" class="nav-link">순위표</a>
+            <a href="info.html" class="nav-link active">대회 정보</a>
+        </nav>
+
+        <!-- 대회 정보 메인 콘텐츠 -->
+        <main class="info-content">
+            <!-- 대회 개요 -->
+            <section class="info-section">
+                <h2 class="section-title">🎼 대회 개요</h2>
+                <div class="info-card">
+                    <p>NAC Op.3는 클래식 음악과 리듬게임의 만남을 통해 새로운 음악 문화를 만들어가는 대회입니다.</p>
+                    <p>바흐, 베토벤, 모차르트부터 현대 클래식까지, 다양한 클래식 명곡들로 여러분의 리듬 감각을 시험해보세요!</p>
+                </div>
+            </section>
+
+            <!-- 대회 일정 -->
+            <section class="info-section">
+                <h2 class="section-title">📅 대회 일정</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024년 1월 15일 ~ 1월 31일</div>
+                        <div class="timeline-content">
+                            <h3>예선 기간</h3>
+                            <p>온라인으로 진행되며, 기간 내 최고 점수가 기록됩니다</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024년 2월 3일</div>
+                        <div class="timeline-content">
+                            <h3>본선 진출자 발표</h3>
+                            <p>상위 16명 선정 및 개별 통보</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024년 2월 17일</div>
+                        <div class="timeline-content">
+                            <h3>본선 대회</h3>
+                            <p>오프라인 대회장에서 최종 결선</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+                   <!-- 대회 규칙 -->
+                    <section class="info-section">
+                        <h2 class="section-title">📋 대회 규칙</h2>
+                        
+                        <!-- 메인 단계 선택 버튼들 -->
+                        <div class="main-stage-buttons">
+                            <button class="main-stage-btn active" data-stage="preliminary">예선 라운드</button>
+                            <button class="main-stage-btn" data-stage="final-rounds">결승 라운드</button>
+                        </div>
+                        <!-- 각 단계별 콘텐츠 -->
+                        <div class="stage-content-wrapper">
+                            <!-- 예선 라운드 -->
+                            <div class="main-stage-content active" id="preliminary">
+                                <div class="stage-content">
+                                    <h3>🎹 예선 라운드</h3>
+                                    <div class="rule-box">
+                                        <p><strong>진행 기간:</strong> 2024년 1월 15일 ~ 1월 31일</p>
+                                        <p><strong>진행 방식:</strong> 온라인 예선</p>
+                                        <p><strong>도전 횟수:</strong> 1인당 최대 5회</p>
+                                        <p><strong>평가 방식:</strong> 4곡 총점제 (각 곡당 100,000점 만점)</p>
+                                        <p><strong>과제곡:</strong></p>
+                                        <ul class="song-list">
+                                            <li>곡1: 월광 소나타 3악장</li>
+                                            <li>곡2: 엘리제를 위하여</li>
+                                            <li>곡3: 터키 행진곡</li>
+                                            <li>곡4: 캐논 변주곡</li>
+                                        </ul>
+                                        <p><strong>진출 조건:</strong> 상위 16명 본선 진출</p>
+                                        <p><strong>동점자 처리:</strong> 더 빨리 제출한 참가자 우선</p>
+                                        <p class="important-note">⚠️ 예선 기간 중 순위는 실시간으로 업데이트됩니다</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 결승 라운드 -->
+                            <div class="main-stage-content" id="final-rounds">
+                                <!-- 결승 라운드 서브 버튼들 -->
+                                <div class="sub-stage-buttons">
+                                    <button class="sub-stage-btn active" data-substage="quarterfinal">8강</button>
+                                    <button class="sub-stage-btn" data-substage="semifinal">준결승</button>
+                                    <button class="sub-stage-btn" data-substage="final">결승</button>
+                                </div>
+                                
+                                <!-- 8강 -->
+                                <div class="sub-stage-content active" id="quarterfinal">
+                                    <h3>⚔️ 8강전</h3>
+                                    <div class="rule-box">
+                                        <p><strong>진행 일자:</strong> 2024년 2월 17일 오후 2시</p>
+                                        <p><strong>진행 방식:</strong> 1대1 토너먼트 (8명 → 4명)</p>
+                                        <p><strong>대진 추첨:</strong> 예선 순위 기준 (1위 vs 16위, 2위 vs 15위...)</p>
+                                        <p><strong>곡 구성:</strong></p>
+                                        <ul class="song-list">
+                                            <li>지정곡 2곡 (당일 공개)</li>
+                                            <li>자유곡 1곡 (사전 제출)</li>
+                                        </ul>
+                                        <p><strong>평가 방식:</strong> 3곡 합산 점수</p>
+                                        <p><strong>특별 규칙:</strong> 자유곡은 상대와 중복 불가</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- 준결승 -->
+                                <div class="sub-stage-content" id="semifinal">
+                                    <h3>🔥 준결승</h3>
+                                    <div class="rule-box">
+                                        <p><strong>진행 일자:</strong> 2024년 2월 17일 오후 4시</p>
+                                        <p><strong>진행 방식:</strong> 1대1 토너먼트 (4명 → 2명)</p>
+                                        <p><strong>곡 구성:</strong></p>
+                                        <ul class="song-list">
+                                            <li>지정곡 2곡 (8강과 다른 곡)</li>
+                                            <li>자유곡 2곡</li>
+                                        </ul>
+                                        <p><strong>평가 방식:</strong></p>
+                                        <ul class="song-list">
+                                            <li>4곡 합산 점수 (90%)</li>
+                                            <li>관객 투표 (10%)</li>
+                                        </ul>
+                                        <p><strong>특별 이벤트:</strong> 퍼포먼스 보너스 점수</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- 결승 -->
+                                <div class="sub-stage-content" id="final">
+                                    <h3>🏆 결승전</h3>
+                                    <div class="rule-box">
+                                        <p><strong>진행 일자:</strong> 2024년 2월 17일 오후 6시</p>
+                                        <p><strong>진행 방식:</strong> 1대1 최종 대결</p>
+                                        <p><strong>곡 구성:</strong></p>
+                                        <ul class="song-list">
+                                            <li>지정곡 3곡 (결승 전용 고난도 곡)</li>
+                                            <li>자유곡 2곡</li>
+                                            <li>앵콜 스테이지 1곡 (관객 선택)</li>
+                                        </ul>
+                                        <p><strong>평가 방식:</strong></p>
+                                        <ul class="song-list">
+                                            <li>곡 점수 (70%)</li>
+                                            <li>심사위원 평가 (20%)</li>
+                                            <li>관객 투표 (10%)</li>
+                                        </ul>
+                                        <p><strong>우승 특전:</strong></p>
+                                        <ul class="song-list">
+                                            <li>🏆 NAC Op.3 챔피언 트로피</li>
+                                            <li>💰 상금 100만원</li>
+                                            <li>🎮 NOSTALGIA Op.3 한정판 상품</li>
+                                            <li>🎹 차기 대회 시드권</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+            <!-- 상품 안내 -->
+            <section class="info-section">
+                <h2 class="section-title">🏆 상품 안내</h2>
+                <div class="prize-container">
+                    <div class="prize-card gold">
+                        <div class="prize-rank">1st</div>
+                        <div class="prize-title">우승</div>
+                        <div class="prize-content">
+                            <p>트로피 + 상금 100만원</p>
+                            <p>프리미엄 리듬게임 컨트롤러</p>
+                        </div>
+                    </div>
+                    <div class="prize-card silver">
+                        <div class="prize-rank">2nd</div>
+                        <div class="prize-title">준우승</div>
+                        <div class="prize-content">
+                            <p>트로피 + 상금 50만원</p>
+                            <p>게이밍 헤드셋</p>
+                        </div>
+                    </div>
+                    <div class="prize-card bronze">
+                        <div class="prize-rank">3rd</div>
+                        <div class="prize-title">3위</div>
+                        <div class="prize-content">
+                            <p>트로피 + 상금 30만원</p>
+                            <p>게이밍 키보드</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="prize-note">* 본선 진출자 전원에게 참가 기념품 증정</p>
+            </section>
+
+            <!-- 문의사항 -->
+            <section class="info-section">
+                <h2 class="section-title">💬 문의사항</h2>
+                <div class="contact-card">
+                    <p>대회 관련 문의사항은 아래 연락처로 문의해주세요</p>
+                    <div class="contact-info">
+                        <p>📧 이메일: nac.op3@example.com</p>
+                        <p>📱 카카오톡: @nacop3</p>
+                        <p>💬 디스코드: NAC Op.3 공식 서버</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <p>&copy; 2024 NAC Op.3. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 메인 단계 버튼 이벤트
+        const mainStageButtons = document.querySelectorAll('.main-stage-btn');
+        const mainStageContents = document.querySelectorAll('.main-stage-content');
+        
+        mainStageButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const targetStage = this.getAttribute('data-stage');
+                
+                // 모든 버튼과 콘텐츠에서 active 클래스 제거
+                mainStageButtons.forEach(btn => btn.classList.remove('active'));
+                mainStageContents.forEach(content => content.classList.remove('active'));
+                
+                // 클릭한 버튼과 해당 콘텐츠에 active 클래스 추가
+                this.classList.add('active');
+                document.getElementById(targetStage).classList.add('active');
+            });
+        });
+        
+        // 서브 단계 버튼 이벤트 (결승 라운드)
+        const subStageButtons = document.querySelectorAll('.sub-stage-btn');
+        const subStageContents = document.querySelectorAll('.sub-stage-content');
+        
+        subStageButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const targetSubStage = this.getAttribute('data-substage');
+                
+                // 모든 서브 버튼과 콘텐츠에서 active 클래스 제거
+                subStageButtons.forEach(btn => btn.classList.remove('active'));
+                subStageContents.forEach(content => content.classList.remove('active'));
+                
+                // 클릭한 버튼과 해당 콘텐츠에 active 클래스 추가
+                this.classList.add('active');
+                document.getElementById(targetSubStage).classList.add('active');
+            });
+        });
+    });
+    </script>
+
+</body>
+</html>
