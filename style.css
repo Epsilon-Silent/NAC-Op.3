@@ -132,10 +132,67 @@ body::before {
     transform: scale(1.05);
 }
 
-/* 반응형 - 모바일에서 로고 크기 조정 */
+/* 모바일 반응형 - 로고와 포스터 크기 최적화 */
 @media (max-width: 768px) {
+    /* 로고 이미지 크게 만들기 */
     .logo-image {
-        max-width: 180px;
+        max-width: 300px !important;
+        width: 90% !important;
+    }
+    
+    /* 포스터 이미지 크게 만들기 */
+    .hero-poster {
+        max-width: 100% !important;
+        width: 95% !important;
+        margin: 0 auto 30px !important;
+    }
+    
+    /* 헤더 패딩 조정 */
+    .main-header {
+        padding: 50px 20px !important;
+    }
+    
+    /* 히어로 섹션 패딩 조정 */
+    .hero-section {
+        padding: 50px 20px !important;
+    }
+    
+    /* 제목들 크기 조정 */
+    .title {
+        font-size: 42px !important;
+    }
+    
+    .subtitle {
+        font-size: 20px !important;
+    }
+    
+    .tagline {
+        font-size: 16px !important;
+    }
+    
+    .hero-description {
+        font-size: 18px !important;
+        line-height: 1.6 !important;
+    }
+}
+
+/* 더 작은 모바일 (480px 이하) */
+@media (max-width: 480px) {
+    .logo-image {
+        max-width: 280px !important;
+        width: 85% !important;
+    }
+    
+    .hero-poster {
+        width: 98% !important;
+    }
+    
+    .title {
+        font-size: 36px !important;
+    }
+    
+    .subtitle {
+        font-size: 18px !important;
     }
 }
 
