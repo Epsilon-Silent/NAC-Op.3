@@ -121,7 +121,8 @@ body::before {
 }
 
 .logo-image {
-    max-width: 400px;
+    width: 100%;
+    max-width: 500px;
     height: auto;
     margin-bottom: 20px;
     filter: drop-shadow(0 5px 15px rgba(139, 69, 19, 0.2));

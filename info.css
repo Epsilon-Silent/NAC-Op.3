@@ -727,3 +727,106 @@
     display: block;
 }
 
+/* 과제곡 부문별 탭 스타일 */
+/* 부문 선택 버튼들 */
+.subject-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.subject-btn {
+    padding: 12px 30px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #D2691E;
+    border-radius: 25px;
+    color: #8B4513;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Noto Serif KR', serif;
+}
+
+.subject-btn:hover {
+    background: linear-gradient(135deg, #D2691E, #DEB887);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.2);
+}
+
+.subject-btn.active {
+    background: linear-gradient(135deg, #D2691E, #DEB887);
+    color: white;
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+}
+
+/* 부문별 콘텐츠 */
+.subject-content {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.subject-content.active {
+    display: block;
+}
+
+.subject-content .song-list {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.1);
+    border: 1px solid rgba(210, 105, 30, 0.2);
+}
+
+.subject-content .song-list li {
+    padding: 8px 0;
+    font-size: 16px;
+    color: #5D4E37;
+    border-bottom: 1px solid rgba(210, 105, 30, 0.1);
+}
+
+.subject-content .song-list li:last-child {
+    border-bottom: none;
+}
+
+.subject-content .song-list li::before {
+    content: '♪';
+    position: absolute;
+    left: -25px;
+    color: #D2691E;
+    font-size: 16px;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .subject-buttons {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .subject-btn {
+        width: 200px;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .subject-song-tabs {
+        padding: 15px;
+    }
+    
+    .subject-content .song-list li {
+        font-size: 14px;
+        padding: 6px 0;
+    }
+}
+
+/* 더 작은 모바일 */
+@media (max-width: 480px) {
+    .subject-btn {
+        width: 180px;
+        font-size: 13px;
+    }
+}

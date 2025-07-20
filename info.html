@@ -91,20 +91,44 @@
                                         <p><strong>진행 방식:</strong> 온라인 예선</p>
                                         <p><strong>도전 횟수:</strong> 1인당 최대 5회</p>
                                         <p><strong>평가 방식:</strong> 4곡 총점제 (각 곡당 100,000점 만점)</p>
+                                        
+                                        <!-- 과제곡 부문별 탭 -->
                                         <p><strong>과제곡:</strong></p>
-                                        <ul class="song-list">
-                                            <li>곡1: 월광 소나타 3악장</li>
-                                            <li>곡2: 엘리제를 위하여</li>
-                                            <li>곡3: 터키 행진곡</li>
-                                            <li>곡4: 캐논 변주곡</li>
-                                        </ul>
+                                        <div class="subject-song-tabs">
+                                            <!-- 부문 선택 버튼 -->
+                                            <div class="subject-buttons">
+                                                <button class="subject-btn active" data-subject="basic">베이직 부문</button>
+                                                <button class="subject-btn" data-subject="recital">리사이틀 부문</button>
+                                            </div>
+                                            
+                                            <!-- 베이직 부문 곡 목록 -->
+                                            <div class="subject-content active" id="basic">
+                                                <ul class="song-list">
+                                                    <li>곡1: 월광 소나타 3악장 (베토벤)</li>
+                                                    <li>곡2: 엘리제를 위하여 (베토벤)</li>
+                                                    <li>곡3: 터키 행진곡 (모차르트)</li>
+                                                    <li>곡4: 캐논 변주곡 (파헬벨)</li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <!-- 리사이틀 부문 곡 목록 -->
+                                            <div class="subject-content" id="recital">
+                                                <ul class="song-list">
+                                                    <li>곡1: 라 캄파넬라 (리스트)</li>
+                                                    <li>곡2: 환상즉흥곡 (쇼팽)</li>
+                                                    <li>곡3: 혁명 에튀드 (쇼팽)</li>
+                                                    <li>곡4: 라흐마니노프 협주곡 2번 1악장</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
                                         <p><strong>진출 조건:</strong> 상위 16명 본선 진출</p>
                                         <p><strong>동점자 처리:</strong> 더 빨리 제출한 참가자 우선</p>
                                         <p class="important-note">⚠️ 예선 기간 중 순위는 실시간으로 업데이트됩니다</p>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- 결승 라운드 -->
                             <div class="main-stage-content" id="final-rounds">
                                 <!-- 결승 라운드 서브 버튼들 -->
@@ -273,6 +297,24 @@
             });
         });
     });
+    // 과제곡 부문별 탭 기능
+const subjectButtons = document.querySelectorAll('.subject-btn');
+const subjectContents = document.querySelectorAll('.subject-content');
+
+subjectButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const targetSubject = this.getAttribute('data-subject');
+        
+        // 모든 버튼과 콘텐츠에서 active 클래스 제거
+        subjectButtons.forEach(btn => btn.classList.remove('active'));
+        subjectContents.forEach(content => content.classList.remove('active'));
+        
+        // 클릭한 버튼과 해당 콘텐츠에 active 클래스 추가
+        this.classList.add('active');
+        document.getElementById(targetSubject).classList.add('active');
+    });
+});
+
     </script>
 
 </body>
