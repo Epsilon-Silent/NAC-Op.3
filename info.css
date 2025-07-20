@@ -286,25 +286,131 @@
 }
 
 /* 반응형 디자인 */
+/* 모바일 전용 추가 반응형 스타일 */
 @media (max-width: 768px) {
-    .timeline {
-        padding-left: 30px;
+    /* 포스터 이미지 크기 조정 */
+    .info-card img,
+    .prize-card img,
+    .timeline-item img {
+        width: 100% !important;
+        max-width: 300px !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        display: block !important;
     }
     
-    .timeline::before {
-        left: 10px;
+    /* 메인 제목 폰트 크기 조정 */
+    .title {
+        font-size: 2.5rem !important;
     }
     
-    .timeline-item::before {
-        left: -30px;
+    .subtitle {
+        font-size: 1.2rem !important;
+    }
+    
+    /* 섹션 제목 더 작게 */
+    .section-title {
+        font-size: 24px !important;
+        margin-bottom: 25px !important;
+        color: #8B4513 !important;
+    }
+    
+    /* 카드 내부 텍스트 크기 조정 */
+    .info-card p {
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+        color: #5D4E37 !important;
+    }
+    
+    /* 타임라인 텍스트 크기 조정 */
+    .timeline-content h3 {
+        font-size: 20px !important;
+        color: #8B4513 !important;
+    }
+    
+    .timeline-content p {
+        font-size: 14px !important;
+        color: #5D4E37 !important;
+    }
+    
+    .timeline-date {
+        color: #D2691E !important;
+    }
+    
+    /* 상품 카드 폰트 조정 */
+    .prize-rank {
+        font-size: 28px !important;
+    }
+    
+    .prize-title {
+        font-size: 18px !important;
+        color: #8B4513 !important;
+    }
+    
+    .prize-content p {
+        font-size: 14px !important;
+        color: #5D4E37 !important;
+    }
+    
+    /* 규칙 박스 텍스트 조정 */
+    .rule-box p {
+        font-size: 15px !important;
+        line-height: 1.7 !important;
+        color: #5D4E37 !important;
+    }
+    
+    /* 곡 리스트 색상 조정 */
+    .song-list li {
+        color: #5D4E37 !important;
+    }
+    
+    /* 전체 컨테이너 패딩 조정 */
+    .container {
+        padding: 10px !important;
+    }
+    
+    .info-content {
+        padding: 0 15px !important;
+    }
+    
+    /* 카드들 패딩 줄이기 */
+    .info-card,
+    .contact-card,
+    .rule-box {
+        padding: 25px 20px !important;
+    }
+    
+    /* 연락처 정보 색상 */
+    .contact-card > p {
+        color: #5D4E37 !important;
+    }
+    
+    .contact-info p {
+        color: #5D4E37 !important;
+    }
+}
+
+/* 더 작은 모바일 (480px 이하) */
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem !important;
     }
     
     .section-title {
-        font-size: 28px;
+        font-size: 20px !important;
+        color: #8B4513 !important;
     }
     
-    .prize-rank {
-        font-size: 36px;
+    .info-card p,
+    .rule-box p {
+        font-size: 14px !important;
+        color: #5D4E37 !important;
+    }
+    
+    .main-stage-btn,
+    .sub-stage-btn {
+        font-size: 14px !important;
+        padding: 10px 20px !important;
     }
 }
 
@@ -620,3 +726,4 @@
 .sub-stage-content.active {
     display: block;
 }
+

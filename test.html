@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>NAC 대회</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .main-stage-content {
+      display: none;
+    }
+
+    .main-stage-content.active {
+      display: block;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+
+    .main-stage-btn {
+      padding: 10px 20px;
+      border: 1px solid #999;
+      background: white;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .main-stage-btn.active {
+      background: #e0e0e0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>NAC Op.3 대회 정보</h1>
+
+  <div>
+    <button class="main-stage-btn active" data-stage="preliminary">예선 라운드</button>
+    <button class="main-stage-btn" data-stage="final">본선 라운드</button>
+  </div>
+
+  <div class="main-stage-content active" id="preliminary">
+    <h3>🎹 예선 라운드</h3>
+    <div class="rule-box">
+      <p><strong>진행 기간:</strong> 2024년 1월 15일 ~ 1월 31일</p>
+      <p><strong>진행 방식:</strong> 온라인 예선</p>
+      <p><strong>도전 횟수:</strong> 1인당 최대 5회</p>
+      <p><strong>평가 방식:</strong> 4곡 총점제 (각 곡당 100,000점 만점)</p>
+      <p><strong>과제곡:</strong></p>
+      <ul class="song-list">
+        <li>곡1: 월광 소나타 3악장</li>
+        <li>곡2: 엘리제를 위하여</li>
+        <li>곡3: 터키 행진곡</li>
+        <li>곡4: 캐논 변주곡</li>
+      </ul>
+      <p><strong>진출 조건:</strong> 상위 16명 본선 진출</p>
+      <p><strong>동점자 처리:</strong> 더 빨리 제출한 참가자 우선</p>
+      <p class="important-note">⚠️ 예선 기간 중 순위는 실시간으로 업데이트됩니다</p>
+    </div>
+  </div>
+
+  <div class="main-stage-content" id="final">
+    <h3>🎼 본선 라운드</h3>
+    <p>본선 라운드는 추후 안내됩니다.</p>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll('.main-stage-btn');
+      const contents = document.querySelectorAll('.main-stage-content');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', function () {
+          const stage = this.getAttribute('data-stage');
+
+          buttons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+
+          contents.forEach(c => {
+            if (c.id === stage) {
+              c.classList.add('active');
+            } else {
+              c.classList.remove('active');
+            }
+          });
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

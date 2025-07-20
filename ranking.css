@@ -11,27 +11,28 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px 30px;
     border-radius: 15px;
     margin-bottom: 30px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 215, 0, 0.2);
+    box-shadow: 0 8px 30px rgba(139, 69, 19, 0.08);
+    border: 1px solid rgba(210, 105, 30, 0.2);
 }
 
 .update-info p {
     font-size: 16px;
-    color: #ffd700;
+    color: #8B4513;
 }
 
 #lastUpdate {
     font-weight: bold;
+    color: #D2691E;
 }
 
 /* 새로고침 버튼 */
 .refresh-button {
-    background: linear-gradient(45deg, #ffd700, #ffed4e);
-    color: #1a1a2e;
+    background: linear-gradient(135deg, #D2691E, #DEB887);
+    color: white;
     border: none;
     padding: 10px 25px;
     border-radius: 25px;
@@ -39,21 +40,22 @@
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.2);
 }
 
 .refresh-button:hover {
     transform: translateY(-2px) rotate(180deg);
-    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
 }
 
 /* 순위표 테이블 컨테이너 */
 .ranking-table-container {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 40px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 215, 0, 0.2);
+    box-shadow: 0 10px 40px rgba(139, 69, 19, 0.08);
+    border: 1px solid rgba(210, 105, 30, 0.2);
     overflow-x: auto;
 }
 
@@ -64,71 +66,71 @@
 }
 
 .ranking-table thead tr {
-    background: rgba(255, 215, 0, 0.1);
-    border-bottom: 2px solid #ffd700;
+    background: rgba(210, 105, 30, 0.1);
+    border-bottom: 2px solid #D2691E;
 }
 
 .ranking-table th {
     padding: 20px 15px;
     text-align: left;
     font-size: 18px;
-    color: #ffd700;
+    color: #8B4513;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
 .ranking-table tbody tr {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(210, 105, 30, 0.1);
     transition: all 0.3s ease;
 }
 
 .ranking-table tbody tr:hover {
-    background: rgba(255, 215, 0, 0.05);
+    background: rgba(210, 105, 30, 0.05);
     transform: translateX(5px);
 }
 
 .ranking-table td {
     padding: 18px 15px;
     font-size: 16px;
-    color: #f5f5f5;
+    color: #5D4E37;
 }
 
 /* 순위별 특별 스타일 */
 .ranking-table tbody tr:nth-child(1) td:first-child {
-    color: #ffd700;
+    color: #D2691E;
     font-size: 24px;
     font-weight: bold;
 }
 
 .ranking-table tbody tr:nth-child(2) td:first-child {
-    color: #c0c0c0;
+    color: #8B4513;
     font-size: 22px;
     font-weight: bold;
 }
 
 .ranking-table tbody tr:nth-child(3) td:first-child {
-    color: #cd7f32;
+    color: #A0522D;
     font-size: 20px;
     font-weight: bold;
 }
 
 /* 1,2,3위 행 전체 강조 */
 .ranking-table tbody tr:nth-child(1) {
-    background: rgba(255, 215, 0, 0.1);
+    background: rgba(210, 105, 30, 0.15);
     font-weight: bold;
 }
 
 .ranking-table tbody tr:nth-child(2) {
-    background: rgba(192, 192, 192, 0.1);
+    background: rgba(139, 69, 19, 0.1);
 }
 
 .ranking-table tbody tr:nth-child(3) {
-    background: rgba(205, 127, 50, 0.1);
+    background: rgba(160, 82, 45, 0.1);
 }
 
 /* 본선 진출 라인 (16위) */
 .ranking-table tbody tr:nth-child(16) {
-    border-bottom: 3px solid #ffd700;
+    border-bottom: 3px solid #D2691E;
 }
 
 /* 로딩 상태 */
@@ -136,62 +138,89 @@
     text-align: center;
     padding: 50px;
     font-size: 18px;
-    color: #ffd700;
+    color: #8B4513;
 }
 
 /* 본선 진출 안내 */
 .qualification-info {
-    background: rgba(255, 215, 0, 0.1);
-    border: 2px solid rgba(255, 215, 0, 0.3);
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(210, 105, 30, 0.3);
     border-radius: 20px;
     padding: 30px;
     text-align: center;
-    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(139, 69, 19, 0.1);
 }
 
 .qualification-info h3 {
     font-size: 28px;
-    color: #ffd700;
+    color: #8B4513;
     margin-bottom: 15px;
 }
 
 .qualification-info p {
     font-size: 18px;
     line-height: 1.8;
+    color: #5D4E37;
 }
 
 .qualification-info strong {
-    color: #ffd700;
+    color: #D2691E;
     font-size: 24px;
 }
 
 .note-text {
     font-size: 14px !important;
-    color: rgba(255, 255, 255, 0.7);
+    color: #8B7355 !important;
     margin-top: 10px;
 }
 
-/* 반응형 디자인 */
-@media (max-width: 768px) {
-    .update-info {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    
-    .ranking-table-container {
-        padding: 15px;
-    }
-    
-    .ranking-table th,
-    .ranking-table td {
-        padding: 12px 8px;
-        font-size: 14px;
-    }
-    
-    .ranking-table tbody tr:nth-child(1) td:first-child {
-        font-size: 20px;
-    }
+/* 4곡 총점 시스템을 위한 추가 스타일 */
+
+/* 테이블 헤더 조정 */
+.ranking-table th:nth-child(3),
+.ranking-table th:nth-child(4),
+.ranking-table th:nth-child(5),
+.ranking-table th:nth-child(6) {
+    background: rgba(210, 105, 30, 0.05);
+    font-size: 16px;
+}
+
+/* 총점 열 강조 */
+.ranking-table th:nth-child(7) {
+    background: rgba(210, 105, 30, 0.2);
+    color: #8B4513;
+    font-size: 20px;
+}
+
+/* 점수 셀 스타일 */
+.ranking-table td:nth-child(3),
+.ranking-table td:nth-child(4),
+.ranking-table td:nth-child(5),
+.ranking-table td:nth-child(6) {
+    font-weight: 500;
+    color: #5D4E37;
+}
+
+/* 높은 점수 하이라이트 */
+.high-score {
+    color: #D2691E !important;
+    font-weight: bold !important;
+    text-shadow: 0 0 10px rgba(210, 105, 30, 0.3);
+}
+
+/* 총점 스타일 */
+.total-score {
+    font-size: 20px !important;
+    font-weight: bold !important;
+    color: #8B4513 !important;
+    background: rgba(210, 105, 30, 0.1);
+}
+
+/* 플레이어 이름 강조 */
+.player-name {
+    font-weight: 600;
+    font-size: 17px;
+    color: #3a3a3a;
 }
 
 /* 순위표 애니메이션 */
@@ -217,52 +246,40 @@
 .ranking-table tbody tr:nth-child(4) { animation-delay: 0.4s; }
 .ranking-table tbody tr:nth-child(5) { animation-delay: 0.5s; }
 
-/* 4곡 총점 시스템을 위한 추가 스타일 */
-
-/* 테이블 헤더 조정 */
-.ranking-table th:nth-child(3),
-.ranking-table th:nth-child(4),
-.ranking-table th:nth-child(5),
-.ranking-table th:nth-child(6) {
-    background: rgba(255, 215, 0, 0.05);
-    font-size: 16px;
-}
-
-/* 총점 열 강조 */
-.ranking-table th:nth-child(7) {
-    background: rgba(255, 215, 0, 0.2);
-    color: #ffd700;
-    font-size: 20px;
-}
-
-/* 점수 셀 스타일 */
-.ranking-table td:nth-child(3),
-.ranking-table td:nth-child(4),
-.ranking-table td:nth-child(5),
-.ranking-table td:nth-child(6) {
-    font-weight: 500;
-    color: #8B4513;
-}
-
-/* 높은 점수 하이라이트 */
-.high-score {
-    color: #D2691E !important;
-    font-weight: bold !important;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-}
-
-/* 총점 스타일 */
-.total-score {
-    font-size: 20px !important;
-    font-weight: bold !important;
-    color: #8B4513 !important;
-    background: rgba(255, 215, 0, 0.1);
-}
-
-/* 플레이어 이름 강조 */
-.player-name {
-    font-weight: 600;
-    font-size: 17px;
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .update-info {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .ranking-table-container {
+        padding: 15px;
+    }
+    
+    .ranking-table th,
+    .ranking-table td {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+    
+    .ranking-table tbody tr:nth-child(1) td:first-child {
+        font-size: 20px;
+    }
+    
+    .qualification-info {
+        padding: 25px 20px;
+    }
+    
+    .qualification-info h3 {
+        font-size: 24px;
+    }
+    
+    .qualification-info p {
+        font-size: 16px;
+    }
 }
 
 /* 반응형 - 작은 화면에서 스크롤 */
@@ -274,5 +291,26 @@
     
     .ranking-table {
         min-width: 800px;
+    }
+}
+
+/* 더 작은 모바일 (480px 이하) */
+@media (max-width: 480px) {
+    .ranking-table th,
+    .ranking-table td {
+        padding: 10px 6px;
+        font-size: 13px;
+    }
+    
+    .ranking-table tbody tr:nth-child(1) td:first-child {
+        font-size: 18px;
+    }
+    
+    .qualification-info h3 {
+        font-size: 20px;
+    }
+    
+    .qualification-info p {
+        font-size: 14px;
     }
 }
