@@ -830,3 +830,70 @@
         font-size: 13px;
     }
 }
+
+/* 완벽한 Flexbox 해결책 */
+
+.rule-box p.hanging-indent {
+    display: flex !important;
+    align-items: flex-start !important;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    
+    /* 모든 이상한 들여쓰기 제거 */
+    text-indent: 0 !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    
+    /* 줄바꿈 보장 */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+}
+
+.rule-box p.hanging-indent strong {
+    flex-shrink: 0 !important; /* 줄어들지 않음 */
+    width: 120px !important;
+    color: #8B4513;
+    font-weight: 700;
+    margin-right: 10px !important;
+    text-align: left !important;
+    
+    /* 정렬 문제 완전 해결 */
+    position: relative !important;
+    left: 0 !important;
+    text-indent: 0 !important;
+}
+
+.rule-box p.hanging-indent .content {
+    flex: 1 !important; /* 나머지 공간 모두 차지 */
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    line-height: 1.6;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+    .rule-box p.hanging-indent strong {
+        width: 100px !important;
+        margin-right: 8px !important;
+        font-size: 15px;
+    }
+    
+    .rule-box p.hanging-indent .content {
+        font-size: 15px;
+    }
+}
+
+/* 아주 작은 모바일에서는 세로 정렬 */
+@media (max-width: 480px) {
+    .rule-box p.hanging-indent {
+        flex-direction: column !important;
+    }
+    
+    .rule-box p.hanging-indent strong {
+        width: auto !important;
+        margin-bottom: 5px;
+        margin-right: 0 !important;
+    }
+}

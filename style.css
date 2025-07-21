@@ -376,10 +376,49 @@ body::before {
     top: 0;
     left: 0;
     right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, #D2691E, #DEB887, #D2691E);
+    height: 12px;
     transform: translateX(-100%);
     transition: transform 0.6s ease;
+}
+
+.highlight-card:hover::before {
+    transform: translateX(0);
+}
+
+/* 첫 번째 카드 */
+.highlight-card:nth-child(1)::before {
+    background: linear-gradient(135deg, 
+        #FE5996 0%,
+        #FE5996 35%,
+        #F9CD5A 35.1%,
+        #F9CD5A 64.9%,
+        #11AB9E 65%,
+        #11AB9E 100%
+    );
+}
+
+/* 두 번째 카드 */
+.highlight-card:nth-child(2)::before {
+    background: linear-gradient(135deg, 
+        #FF4C65 0%,
+        #FF4C65 35%,
+        #FFCE41 35.1%,
+        #FFCE41 64.9%,
+        #56B67D 65%,
+        #56B67D 100%
+    );
+}
+
+/* 세 번째 카드 - 오렌지/빨강/자주 그라데이션 */
+.highlight-card:nth-child(3)::before {
+    background: linear-gradient(135deg, 
+        #FB923C 0%,      /* 오렌지 */
+        #FB923C 25%,
+        #EF4444 25.1%,   /* 빨강 */
+        #EF4444 75%,
+        #BE185D 75.1%,   /* 자주 */
+        #BE185D 100%
+    );
 }
 
 .highlight-card:hover::before {
@@ -530,5 +569,245 @@ body::before {
         width: 95%;
         right: 2.5%;
         bottom: 10px;
+    }
+}
+
+/* 다국어 선택 버튼 스타일 */
+
+.language-selector {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.language-title {
+    font-size: 32px;
+    color: #8B4513;
+    margin-bottom: 40px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.language-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.language-btn {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid rgba(210, 105, 30, 0.3);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    font-family: 'Noto Serif KR', serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.language-btn:hover {
+    background: linear-gradient(135deg, #D2691E, #DEB887);
+    border-color: #D2691E;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(139, 69, 19, 0.2);
+}
+
+.language-btn:hover .flag,
+.language-btn:hover .lang-name,
+.language-btn:hover .lang-desc {
+    color: white;
+}
+
+.language-btn.active {
+    background: linear-gradient(135deg, #D2691E, #DEB887);
+    border-color: #D2691E;
+    box-shadow: 0 8px 20px rgba(139, 69, 19, 0.3);
+}
+
+.language-btn.active .flag,
+.language-btn.active .lang-name,
+.language-btn.active .lang-desc {
+    color: white;
+}
+
+.language-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s;
+}
+
+.language-btn:hover::before {
+    left: 100%;
+}
+
+.flag {
+    font-size: 32px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+}
+
+.lang-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #8B4513;
+    margin-right: 0px;
+    min-width: 120px;
+}
+
+.lang-desc {
+    font-size: 16px;
+    color: #5D4E37;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .language-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .language-buttons {
+        max-width: 350px;
+        gap: 15px;
+    }
+    
+    .language-btn {
+        padding: 15px 20px;
+    }
+    
+    /* 국기 이미지 스타일 */
+.flag-image {
+    width: 40px;
+    height: 35px;
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-right: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.language-btn:hover .flag-image {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.language-btn.active .flag-image {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.9);
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .flag-image {
+        width: 40px;
+        height: 28px;
+        margin-right: 15px;
+        border-radius: 6px;
+    }
+}
+
+/* 더 작은 모바일 */
+@media (max-width: 480px) {
+    .flag-image {
+        width: 35px;
+        height: 25px;
+        margin-right: 12px;
+        border-radius: 5px;
+    }
+}
+    
+    .lang-name {
+        font-size: 20px;
+        min-width: 100px;
+        margin-right: 10px;
+    }
+    
+    .lang-desc {
+        font-size: 14px;
+    }
+}
+
+/* 더 작은 모바일 */
+@media (max-width: 480px) {
+    .language-buttons {
+        max-width: 300px;
+    }
+    
+    .language-btn {
+        padding: 12px 15px;
+    }
+    
+    .flag {
+        font-size: 24px;
+        margin-right: 12px;
+        width: 35px;
+    }
+    
+    .lang-name {
+        font-size: 18px;
+        min-width: 80px;
+    }
+    
+    .lang-desc {
+        font-size: 13px;
+    }
+}
+
+.flag-image {
+    margin-right: 30px !important; 
+}
+
+/* 언어 전환 버튼 스타일 */
+.language-switcher {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.language-switch-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #D2691E;
+    border-radius: 25px;
+    color: #8B4513;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: 'Noto Serif KR', serif;
+}
+
+.language-switch-btn:hover {
+    background: linear-gradient(135deg, #D2691E, #DEB887);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.2);
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .language-switch-btn {
+        font-size: 14px;
+        padding: 8px 16px;
     }
 }

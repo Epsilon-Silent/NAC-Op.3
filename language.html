@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAC Op.3 - 클래식 리듬게임 토너먼트</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 구글 폰트 - 우아한 폰트 추가 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 배경 애니메이션을 위한 음표들 -->
+    <div class="music-notes">
+        <span class="note">♪</span>
+        <span class="note">♫</span>
+        <span class="note">♩</span>
+        <span class="note">♬</span>
+        <span class="note">♪</span>
+    </div>
+
+    <!-- 메인 컨테이너 -->
+    <div class="container">
+       <!-- 헤더 영역 -->
+        <header class="main-header">
+         <!-- 로고 이미지 -->
+            <img src="images/NAC2025_title.png" alt="NAC Op.3" class="logo-image">
+            <p class="subtitle">Nostalgia Arcade Championship Op.3</p>
+            <p class="tagline">클래식과 리듬의 아름다운 만남</p>
+        </header>
+<section class="hero-section">
+    <!-- 언어 선택 버튼들 -->
+    <div class="language-buttons">
+        <button class="language-btn" data-lang="jp">
+            <img src="images/flags/japan.png" alt="일본" class="flag-image">
+            <span class="lang-name">日本語</span>
+            <span class="lang-desc">Japanese</span>
+        </button>
+        
+        <button class="language-btn active" data-lang="ko">
+            <img src="images/flags/korea.png" alt="한국" class="flag-image">
+            <span class="lang-name">한국어</span>
+            <span class="lang-desc">Korean</span>
+        </button>
+        
+        <button class="language-btn" data-lang="zh">
+            <img src="images/flags/taiwan.png" alt="대만" class="flag-image">
+            <span class="lang-name">繁體中文</span>
+            <span class="lang-desc">Traditional Chinese</span>
+        </button>
+        
+        <button class="language-btn" data-lang="en">
+            <img src="images/flags/us.png" alt="미국" class="flag-image">
+            <span class="lang-name">English</span>
+            <span class="lang-desc">English</span>
+        </button>
+    </div>
+</section>
+
+            <!-- 대회 하이라이트 -->
+            <section class="highlights">
+                <div class="highlight-card">
+                    <img src="images/NAC2023_title.png" alt="NAC Op.3" class="logo-image">
+                    <p>바흐부터 라흐마니노프까지<br>다양한 클래식 명곡들</p>
+                </div>
+                <div class="highlight-card">
+                    <img src="images/NAC2024_title.png" alt="NAC Op.3" class="logo-image">
+                    <p>우승자에게는 특별한<br>상품이 준비되어 있습니다</p>
+                </div>
+                <div class="highlight-card">
+                    <img src="images/NAC2025_title.png" alt="NAC Op.3" class="logo-image">
+                    <p>실력으로 승부하는<br>투명한 대회 운영</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- 푸터 -->
+        <footer class="main-footer">
+            <p>&copy; 2024 NAC Op.3. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="language.js"></script>
+</body>
+</html>
