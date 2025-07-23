@@ -360,7 +360,7 @@ body::before {
 
 .highlight-card {
     background: rgba(255, 255, 255, 0.9);
-    padding: 50px 30px;
+    padding: 20px 30px;
     border-radius: 25px;
     text-align: center;
     box-shadow: 0 8px 30px rgba(139, 69, 19, 0.08);
@@ -413,10 +413,10 @@ body::before {
 .highlight-card:nth-child(3)::before {
     background: linear-gradient(135deg, 
         #FB923C 0%,      /* 오렌지 */
-        #FB923C 25%,
-        #EF4444 25.1%,   /* 빨강 */
-        #EF4444 75%,
-        #BE185D 75.1%,   /* 자주 */
+        #FB923C 35%,
+        #EF4444 35.1%,   /* 빨강 */
+        #EF4444 64.9%,
+        #BE185D 65%,   /* 자주 */
         #BE185D 100%
     );
 }
@@ -432,7 +432,7 @@ body::before {
 
 .highlight-card h3 {
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #8B4513;
 }
 

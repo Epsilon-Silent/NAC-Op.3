@@ -104,8 +104,7 @@ cards.forEach((card, index) => {
 });
 
 // 콘솔에 이스터에그 메시지
-console.log('%c🎼 NAC Op.3 - 클래식과 리듬의 향연에 오신 것을 환영합니다! 🎼', 
-    'color: #ffd700; font-size: 20px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);');
+console.log('삿포로는 너무 추워');
 
 // 이스터에그 1: Konami Code (↑↑↓↓←→←→BA)
 let konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
@@ -297,3 +296,13 @@ document.head.appendChild(spinStyle);
 
 // 이스터에그 3: 특정 이름 입력 시 (순위표에서)
 // ranking.js에 추가하면 좋습니다!
+
+// NAC로고 클릭시 이동 딜레이
+document.querySelectorAll('.logo-link').forEach(function(logo) {
+    logo.addEventListener('click', function(e) {
+        const targetUrl = this.dataset.url;
+        setTimeout(() => {
+            window.open(targetUrl, '_blank');
+        }, 300);
+    });
+});
